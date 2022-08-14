@@ -3,7 +3,7 @@ For this assignment you have to write a c program that will utilizes binary sear
 
 Problem Description
 You would like to create a tool that allows you to analyze the frequency of words in various works,
-while you practice your binary tree skills for COP 3502. You’ve decided to write a program that
+while you practice your binary tree skills. You’ve decided to write a program that
 reads in words, one by one and stores them in a binary search tree, organized in alphabetical order.
 You will have one node per each unique word, and in that node, you’ll store the word with its
 frequency. Here is an example picture of a small tree:
