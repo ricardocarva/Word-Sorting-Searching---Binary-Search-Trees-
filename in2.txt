@@ -1,0 +1,11 @@
+10
+1 fog
+1 pet
+2 fog
+1 fog
+2 fog
+1 eat
+1 mat
+1 eat
+2 pet
+1 mat

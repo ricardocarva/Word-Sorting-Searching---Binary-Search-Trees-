@@ -1,0 +1,8 @@
+7
+2 mat
+2 eat
+2 sip
+1 mat
+2 mat
+1 eat
+2 eat

@@ -1,0 +1,116 @@
+The strategy to test the integrity of the code consisted of some test cases testing the following:
+
+In the in1.txt, we started to query the code right away without inserting any tree nodes. So, the code should respond to the initial three queries with -1 for frequency and depth.
+
+-----------------------------------------------------------------------------------------
+				Test Case#1: in1.txt
+----------------------------------------------------------------------------------
+12 //numLines
+2 mat //query
+2 eat //query
+2 sip //query
+1 mat //insertion
+2 mat /query root value that was just inserted
+1 eat
+2 eat
+
+------------------------
+
+It is expected to have three lines with -1 -1, then a 1 0 for the root. Next, we should have a 1 0 to the eat query because eat is the left child of out mat root.
+
+Further, both frequencies for eat and mat are equalts to 1.
+
+There were no sips inserted. So, there shouldn't be a sip string with its frequency.
+
+In the second part, we are expecting to see eat 1 and mat 1.
+
+-----------------------------------------------------------------------------------------
+	    	Test Case#1: out1.txt
+-----------------------------------------------------------------------------------------
+
+-1 -1
+-1 -1
+-1 -1
+1 0
+1 1
+eat 1
+mat 1
+
+
+The code matches the expectation. So, it is correct.
+
+Int the in2.txt, we initialized as normal our binary tree, and we added slowly some items. 
+-----------------------------------------------------------------------------------------
+	    	Test Case#2: in2.txt
+-----------------------------------------------------------------------------------------
+
+10
+1 fog
+1 pet
+2 fog
+1 fog
+2 fog
+1 eat
+1 mat
+1 eat
+2 pet
+1 mat
+
+
+-----------------------------------------------------------------------------------------
+
+Here, we initialized the code inserting fog and pet to our binary tree. Then, we queried fog, which is out root. So, the expected outcome should be 1 0. Next, we added 1 to fog, and queried right away. So, we had 2 0. Further, we added eat and mat to our tree. Following, we added another 1 to eat's frequency. Now, we queried pet that was added after our root. So, we expect to have 1 1 for this query.
+
+In the second part, we are expecting to see eat 2, fog 2, mat 2, and pet 1.
+
+
+-----------------------------------------------------------------------------------------
+	    	Test Case#2: out2.txt
+-----------------------------------------------------------------------------------------
+
+1 0
+2 0
+1 1
+eat 2
+fog 2
+mat 2
+pet 1
+
+The code matches the expectation. So, it is correct.
+
+Int the in3.txt, we initialized inserting alike strings to see if they would line up correctly. 
+-----------------------------------------------------------------------------------------
+	    	Test Case#3: in3.txt
+-----------------------------------------------------------------------------------------
+
+7
+1 aac
+1 aab
+1 aab
+1 aac
+2 aab
+2 aac
+1 abc
+
+-----------------------------------------------------------------------------------------
+We inserted aac, aab, aab, and aac again. So, at this point there are 2 aabs and 2 aac. They are tied. Even though aac was added first, the string aab should come before aac in the second part because we need to check which one of them comes first alphabeticaly to break the tie.
+
+aac is the top of the tree, so its depth is 0. 
+aab is the left child of acc, so its depth is 1.
+
+abc was added last only once. So, as it has only 1 of them, it is the third to be listed in our sorted print.
+
+-----------------------------------------------------------------------------------------
+	    	Test Case#3: out3.txt
+-----------------------------------------------------------------------------------------
+
+2 1
+2 0
+aab 2
+aac 2
+abc 1
+
+As expected the code passed this test. So we verified that it handles the queries properly when an item wasn't inserted yet, it prints the frequency and depth accordingly, and it uses the right criteria to break the ties.
+
+So, all the tests passed. 
+

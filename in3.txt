@@ -1,0 +1,8 @@
+7
+1 aac
+1 aab
+1 aab
+1 aac
+2 aab
+2 aac
+1 abc
